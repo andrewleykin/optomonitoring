@@ -4,7 +4,7 @@
 	const headerEl = $('.header');
 	const	headerClass = 'header--background';
 	const { pathname } = location;
-	if (pathname !== '/' && pathname !== '/index.html') {
+	if (!$('.js-index')) {
 		headerEl.addClass(headerClass)
 	} else {
 		$(window).on('scroll', () => {
