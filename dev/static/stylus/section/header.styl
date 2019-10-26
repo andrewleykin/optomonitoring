@@ -1,0 +1,49 @@
+.header
+  display flex
+  align-items center
+  height 90px
+  padding 0 85px
+  position fixed
+  top 0
+  left 0
+  right 0
+  color white
+  z-index 10
+  &:after
+    content ''
+    display block
+    width 100%
+    height 100%
+    background-image linear-gradient(#000, transparent)
+    position absolute
+    left 0
+    z-index -1
+  &--background
+    background-color #fff
+    &:after
+      display none
+    .header__logo
+      svg
+        fill accent-color
+    .header-text,
+    .menu__item 
+      color #000
+    .menu__open
+      svg
+        fill #000
+
+.header__logo
+  max-width 177px
+  margin-right auto
+  svg
+    width 100%
+    fill white
+
+.header__switch
+  margin-left 60px
+  margin-right 80px
+
+.header-text
+  font-size 10px
+  text-transform uppercase
+  letter-spacing .1px
