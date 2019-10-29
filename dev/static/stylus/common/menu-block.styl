@@ -1,0 +1,152 @@
+.menu-block
+  position relative
+  color black
+  overflow-y scroll
+  max-height 100%
+  min-height 700px
+  background url(../img/content/index/systems-bg.jpg) center no-repeat
+  background-size cover
+  height 100%
+  .header-text
+    color black
+
+.menu-block__content
+  display flex
+  height 100%
+
+.menu-block__col
+  width 25%
+  padding 150px 20px 0 30px
+  display flex
+  flex-direction column
+  &+&
+    border-left 1px solid mercury
+  &:first-child
+    padding 0
+  &:nth-child(even)
+    background-color #fff
+  &--nda
+    z-index 0
+    position relative
+    &:before
+      content ''
+      display block
+      width 100%
+      background-color #fff
+      position absolute
+      top 440px
+      bottom 0
+      left 0
+      z-index -1
+
+.menu-block__col-wrapper
+  padding 0 30px
+
+.menu-block__col-title
+  font-size 14px
+  font-weight 500
+  letter-spacing 0.14px
+  text-transform uppercase
+  margin-bottom 60px
+  &--not-transform
+    text-transform none
+
+.menu-block__col-text
+  display block
+  margin-bottom 50px
+  color base-color
+
+.menu-block__col-link
+  display block
+  font-weight 500
+  align-self flex-start
+  padding 10px
+  margin-left -10px
+  &:hover
+    text-decoration underline
+
+.menu-block__col-nda
+  margin-top 120px
+
+.menu-block__logo
+  background-color accent-color
+  display flex
+  align-items center
+  justify-content center
+  height 90px
+  margin-bottom 60px
+  svg
+    width 177px
+    height 45px
+    fill white
+
+.menu-block__contact-form
+  margin-top 30px
+  .form
+    margin-bottom 20px
+
+.menu-block__copyright
+  margin-top 40px
+
+.menu-block__systems-item
+  display block
+  &:hover
+    .systems__item-title
+      text-decoration underline
+  &+&
+    margin-top 90px
+  .systems__icon
+    margin-bottom 20px
+      svg
+        width 90px
+        height 60px
+  .systems__item-title
+    font-size 14px
+    line-height 16px
+    margin-bottom 15px
+    max-width 220px
+
+.menu-block__action
+  position absolute
+  right 85px
+  top 0
+  height 90px
+  display flex
+  align-items center
+
+.menu-block__close
+  display flex
+  align-items center
+  cursor pointer
+  width 85px
+  svg
+    margin-right 13px
+    fill black
+    width 32px
+    height 32px
+    flex none
+
+.menu-block__info
+  position absolute
+  right 0
+  top 600px
+  width 100%
+  max-width 1050px
+  padding-left 240px
+
+.menu-block__info-img
+  position absolute
+  top 0
+  left 0
+
+.menu-block__info-title
+  max-width 430px
+  color accent-color
+  font-size 34px
+  font-weight 500
+  line-height 36px
+  letter-spacing 0.34px
+  margin-bottom 10px
+
+.menu-block__info-text
+  max-width 405px

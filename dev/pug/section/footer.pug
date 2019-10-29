@@ -7,24 +7,13 @@ footer.footer.footer--index
         h4.footer__about-title= global.footer.about.title
         .footer__about-content
           each item in global.footer.about.texts
-            p.footer__about-text= item
-      span.footer__copyright= global.footer.copyright
+            p.text.footer__about-text= item
+      include ../modules/copyright
     .footer__col.footer__col--row
       .footer__contacts
         h5.footer__contacts-title= global.footer.contacts.title
-        p.footer__contacts-address 129515, Москва,<br>ул. Академика Королёва, дом 6, корпус 1
-        each item in global.footer.contacts.links
-          a.footer__contacts-link
-            +icon(item["icon"])
-            span(href=item["href"])= item["text"]
-        a.footer__contacts-policy(href=global.footer.contacts.policy.href)= global.footer.contacts.policy.text
-      form.footer__form.form(action=global.footer.form.action method="POST" data-validation)
-        h5.footer__form-title= global.footer.form.title
-        each item in global.footer.form.fields
-          .form__group
-            input.form__input(id=item["id"] name=item["name"] data-name=item["data"] typ="text")
-            label.form__label(for=item["id"])= item["label"]
-        .form__group
-          textarea.form__textarea(name=global.footer.form.message.name placeholder=global.footer.form.message.placeholder)
-        .form__actions
-          button.btn(type="submit")= global.footer.form.button
+        include ../modules/contact-block
+        .footer__contacts-policy
+          include ../modules/policy
+      .footer__form
+        include ../modules/contact-form

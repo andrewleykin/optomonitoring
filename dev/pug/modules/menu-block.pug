@@ -1,0 +1,48 @@
+.menu-block
+  .menu-block__content
+    .menu-block__col
+      .menu-block__logo
+        +icon(global.logo.icon)
+      .menu-block__col-wrapper
+        h4.menu-block__col-title.menu-block__col-title--not-transform= global.coopName
+        .menu-block__contact-block
+          include ./contact-block
+        .menu-block__contact-form
+          include ./contact-form
+          include ./policy
+        .menu-block__copyright
+          include ./copyright
+    .menu-block__col
+      h4.menu-block__col-title= index.systems.title
+      .menu-block__systems
+        each item in index.systems.list
+          a.menu-block__systems-item(href="#")
+            .systems__icon
+              +icon(item["icon"])
+            h3.systems__item-title= item["title"]
+            p.text.systems__text= item["text"]
+    .menu-block__col
+      h4.menu-block__col-title= nav.menuBlock.sience.title
+      p.text.menu-block__col-text= nav.menuBlock.sience.text
+      each item in nav.menuBlock.sience.list
+        a.menu-block__col-link(href=item["link"])= item["text"]
+    .menu-block__col
+      h4.menu-block__col-title= nav.menuBlock.about.title
+      p.text.menu-block__col-text= nav.menuBlock.about.text
+      each item in nav.menuBlock.about.list
+        a.menu-block__col-link(href=item["link"])= item["text"]
+    .menu-block__col.menu-block__col--nda
+      h4.menu-block__col-title= nav.menuBlock.pressCenter.title
+      each item in nav.menuBlock.pressCenter.list
+        a.menu-block__col-link(href=item["link"])= item["text"]
+      .menu-block__col-nda
+        a.menu-block__col-link(href="#")= nav.menuBlock.nda
+  .menu-block__action
+    .menu-block__close
+      +icon('menu-close')
+      span.header-text Закрыть
+    span.header__switch.header-text Eng
+  .menu-block__info
+    img.menu-block__info-img(src=nav.menuBlock.info.img alt=nav.menuBlock.info.title)
+    h3.menu-block__info-title= nav.menuBlock.info.title
+    p.text.menu-block__info-text= nav.menuBlock.info.text

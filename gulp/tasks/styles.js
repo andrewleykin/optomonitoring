@@ -8,7 +8,6 @@ module.exports = function () {
                 browsers: ['last 3 version']
             }))
             .pipe($.gp.csscomb())
-            .pipe($.gp.csso())
             .pipe($.gulp.dest('./build/app/css/'))
     });
 

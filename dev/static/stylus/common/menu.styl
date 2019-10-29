@@ -18,8 +18,24 @@
   display flex
   align-items center
   cursor pointer
+  width 85px
   svg
     margin-right 13px
     fill white
     width 32px
     height 32px
+
+.menu__block
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  z-index 1000
+  background #fff
+  opacity 0
+  visibility hidden
+  transition all .2s
+  &.menu__block--active
+    opacity 1
+    visibility visible
