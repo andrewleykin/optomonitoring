@@ -78,12 +78,13 @@
     padding 0 15px
 
 .menu-block__col-content
-  display none
-  position absolute
-  left 20px
-  right 20px
-  bottom 0
-  top 150px
+  @media (max-width breakpoint-md)
+    display none
+    position absolute
+    left 20px
+    right 20px
+    bottom 0
+    top 150px
   @media (max-width breakpoint-sm)
     top 170px
 
