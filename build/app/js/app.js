@@ -4,8 +4,9 @@
 	const headerEl = $('.header');
 	const	headerClass = 'header--background';
 	const { pathname } = location;
-	if (!$('.js-index')) {
+	if (!!$('.js-index')) {
 		headerEl.addClass(headerClass)
+		$('.main').addClass('main--inner')
 	} else {
 		$(window).on('scroll', () => {
 			$(window).scrollTop() >= 65 
@@ -37,6 +38,20 @@
 		$('.menu__block').removeClass('menu__block--active')
 		$('body').removeClass('overflow-hidden')
 	})
+
+	if ($(window).width() <= 768) {
+		$('.advantage').slick({
+			dots: true,
+			arrows: false,
+			adaptiveHeight: true
+		})
+
+		$('.menu-block__col').eq(1).addClass('active')
+
+		$('.menu-block__col-title').click(function(){
+			var parentIndex = $(this).closest('.menu-block__col').addClass('active').siblings().removeClass('active')
+		})
+	}
 })();
 $(document).ready(function () {
     svg4everybody({});

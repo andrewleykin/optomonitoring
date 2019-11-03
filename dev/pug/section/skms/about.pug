@@ -1,0 +1,13 @@
+section.skms-about.inner-section
+  .container
+    .inner-section__wrap
+      .skms-about__head
+        .skms-about__info
+          h3.inner-section__title.skms-about__title= skms.about.title
+          p.text= skms.about.text
+        +icon(skms.about.icon)
+      .skms-about__list.inner-section__list
+        each item in skms.about.list
+          .skms-about__item.inner-section__item
+            +icon(item["icon"])
+            span.text= item.text

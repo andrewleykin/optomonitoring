@@ -14,29 +14,32 @@
           include ./copyright
     .menu-block__col
       h4.menu-block__col-title= index.systems.title
-      .menu-block__systems
+      .menu-block__col-content.menu-block__systems
         each item in index.systems.list
-          a.menu-block__systems-item(href="#")
+          .menu-block__systems-item
             .systems__icon
               +icon(item["icon"])
-            h3.systems__item-title= item["title"]
+            a.systems__item-title(href="#")= item["title"]
             p.text.systems__text= item["text"]
     .menu-block__col
       h4.menu-block__col-title= nav.menuBlock.sience.title
-      p.text.menu-block__col-text= nav.menuBlock.sience.text
-      each item in nav.menuBlock.sience.list
-        a.menu-block__col-link(href=item["link"])= item["text"]
+      .menu-block__col-content
+        p.text.menu-block__col-text= nav.menuBlock.sience.text
+        each item in nav.menuBlock.sience.list
+          a.text.menu-block__col-link(href=item["link"])= item["text"]
     .menu-block__col
       h4.menu-block__col-title= nav.menuBlock.about.title
-      p.text.menu-block__col-text= nav.menuBlock.about.text
-      each item in nav.menuBlock.about.list
-        a.menu-block__col-link(href=item["link"])= item["text"]
+      .menu-block__col-content
+        p.text.menu-block__col-text= nav.menuBlock.about.text
+        each item in nav.menuBlock.about.list
+          a.text.menu-block__col-link(href=item["link"])= item["text"]
     .menu-block__col.menu-block__col--nda
       h4.menu-block__col-title= nav.menuBlock.pressCenter.title
-      each item in nav.menuBlock.pressCenter.list
-        a.menu-block__col-link(href=item["link"])= item["text"]
-      .menu-block__col-nda
-        a.menu-block__col-link(href="#")= nav.menuBlock.nda
+      .menu-block__col-content
+        each item in nav.menuBlock.pressCenter.list
+          a.text.menu-block__col-link(href=item["link"])= item["text"]
+        .menu-block__col-nda
+          a.text.menu-block__col-link(href="#")= nav.menuBlock.nda
   .menu-block__action
     .menu-block__close
       +icon('menu-close')
@@ -46,3 +49,5 @@
     img.menu-block__info-img(src=nav.menuBlock.info.img alt=nav.menuBlock.info.title)
     h3.menu-block__info-title= nav.menuBlock.info.title
     p.text.menu-block__info-text= nav.menuBlock.info.text
+  .menu-block__mobile-logo.menu-block__logo
+    +icon(global.logo.icon)

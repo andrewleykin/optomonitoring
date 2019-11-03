@@ -6,6 +6,7 @@ module.exports = function() {
                     nav: JSON.parse($.fs.readFileSync('./data/navigation.json', 'utf8')),
                     global: JSON.parse($.fs.readFileSync('./data/global.json', 'utf8')),
                     index: JSON.parse($.fs.readFileSync('./data/pages/index.json', 'utf8')),
+                    skms: JSON.parse($.fs.readFileSync('./data/pages/skms.json', 'utf8')),
                 },
                 pretty: true
             }))
