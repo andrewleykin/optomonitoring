@@ -1,6 +1,7 @@
 // Начальная функция
 
 (function(){
+	// header
 	const headerEl = $('.header');
 	const	headerClass = 'header--background';
 	const { pathname } = location;
@@ -15,6 +16,7 @@
 		})
 	}
 
+	// form label
 	function labelHide() {
 		$('.form__input').each(function() {
 			$(this).focus(function() {
@@ -29,6 +31,7 @@
 	}
 	labelHide()
 
+	// menu
 	$('.menu__open').click(function() {
 		$('.menu__block').addClass('menu__block--active')
 		$('body').addClass('overflow-hidden')
@@ -39,6 +42,19 @@
 		$('body').removeClass('overflow-hidden')
 	})
 
+	// scroll to element
+	function scrollNav() {
+		$('.js-scroll-to').on("click", function(){  
+			//Animate
+			$('html, body').stop().animate({
+					scrollTop: $( $(this).attr('href') ).offset().top - 100
+			}, 400);
+			return false;
+		});
+	}
+	scrollNav();
+
+	// adaptive
 	if ($(window).width() <= 768) {
 		$('.advantage').slick({
 			dots: true,

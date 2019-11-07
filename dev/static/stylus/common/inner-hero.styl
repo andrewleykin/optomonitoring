@@ -2,6 +2,8 @@
   background-color accent-color
   color white
   padding 40px 0 120px
+  @media (max-width breakpoint)
+    padding 40px 20px
 
 .inner-hero__breadcrumbs
   margin-bottom 20px
@@ -14,9 +16,15 @@
   max-width 850px
   margin-bottom 60px
   margin-top 0
+  @media (max-width breakpoint-md)
+    margin-bottom 20px
+    font-size 34px
+    line-height 36px
 
 .inner-hero__row
   display flex
+  @media (max-width breakpoint-md)
+    flex-wrap wrap
 
 .inner-hero__block
   display flex
@@ -26,6 +34,14 @@
   max-width 320px
   &+&
     margin-left 50px
+  @media (max-width breakpoint-md)
+    width 100%
+    max-width 50%
+    margin-bottom 20px
+    &+&
+      margin-left 0
+  @media (max-width breakpoint-sm)
+    max-width 100%
 
 .inner-hero__subtitle
   margin-bottom 20px
@@ -53,3 +69,7 @@
       margin-right 10px
     &+&
       margin-top 40px
+  @media (max-width breakpoint-md)
+    &--with-icon
+      &+&
+        margin-top 20px

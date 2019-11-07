@@ -8,11 +8,11 @@ section.inner-hero
       .inner-hero__block
         h4.inner-hero__subtitle= skms.hero.about.title
         each item in skms.hero.about.links
-          a.inner-hero__link.js-scroll(href="#" data-section=item["link"])= item.text
+          a.inner-hero__link.js-scroll-to(href=item["link"])= item.text
       .inner-hero__block
         h4.inner-hero__subtitle= skms.hero.projects.title
         each item in skms.hero.projects.links
-          a.inner-hero__link.js-scroll(href="#")= item
+          a.inner-hero__link(href="#")= item
       .inner-hero__block
         a.inner-hero__link.inner-hero__link--with-icon(href=skms.hero.docs.link download)
           +icon(skms.hero.docs.icon)

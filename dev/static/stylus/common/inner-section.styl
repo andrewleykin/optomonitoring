@@ -1,11 +1,9 @@
-.inner-section
-  &+&
-    margin-top 40px
-
 .inner-section__wrap
   padding 50px 40px
   border-left 1px solid mercury
   border-right 1px solid mercury
+  @media (max-width breakpoint)
+    padding 40px 20px
 
 .inner-section__title
   font-size 34px
@@ -28,6 +26,17 @@
     height 76px
     margin-right 65px
     flex none
+  @media (max-width breakpoint)
+    max-width 50%
+    svg
+      margin-right 20px
+  @media (max-width breakpoint-md)
+    svg
+      width 40px
+      height 40px
+      margin-right 20px
+  @media (max-width breakpoint-sm)
+    max-width 100%
 
 .inner-section__text
   max-width 480px
