@@ -1,0 +1,9 @@
+section.skms-features.inner-section(id=skms.features.id)
+  .container
+    .inner-section__wrap
+      h3.inner-section__title.skms-features__title= skms.features.title
+      .skms-features__list.inner-section__list
+        each item in skms.features.list
+          .skms-features__item.inner-section__item
+            +icon(item["icon"])
+            span.text= item.text
