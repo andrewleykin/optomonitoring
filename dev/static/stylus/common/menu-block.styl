@@ -17,6 +17,10 @@
   @media (max-width breakpoint-sm)
     flex-wrap wrap
     padding-top 100px
+  @media (max-width breakpoint-md)
+    display block
+    height 100%
+    padding-top 100px
 
 .menu-block__col
   width 25%
@@ -55,8 +59,11 @@
     &:first-child
       display none
   @media (max-width breakpoint-md)
+    padding 0 20px
+    width 100%
     &+&
       border-left none
+      margin-top 20px
     &--nda
       position static
       &:before
@@ -66,11 +73,9 @@
         display block
       .menu-block__col-title
         color accent-color
-  @media (max-width breakpoint-sm)
-    width 50%
-    padding 0 20px
-    &:nth-child(even)
-      margin-bottom 10px
+        margin-bottom 10px
+        &:after
+          transform translateY(-3px) rotate(-135deg) 
 
 .menu-block__col-wrapper
   padding 0 30px
@@ -80,13 +85,7 @@
 .menu-block__col-content
   @media (max-width breakpoint-md)
     display none
-    position absolute
-    left 20px
-    right 20px
-    bottom 0
-    top 150px
-  @media (max-width breakpoint-sm)
-    top 170px
+    padding-left 10px
 
 .menu-block__col-title
   font-size 14px
@@ -99,9 +98,20 @@
   @media (max-width breakpoint)
     margin-bottom 30px
   @media (max-width breakpoint-md)
+    font-size 20px
     margin-bottom 0
-    text-align center
     cursor pointer
+    display flex
+    align-items center
+    &:after
+      content ''
+      display block
+      width 8px
+      height 8px
+      margin-left 6px
+      border-left 1px solid gray
+      border-top 1px solid gray
+      transform rotate(45deg) 
 
 .menu-block__col-text
   display block
@@ -109,6 +119,8 @@
   color base-color
   @media (max-width breakpoint-sm)
     margin-bottom 20px
+  @media (max-width breakpoint-md)
+    display none
 
 .menu-block__col-link
   display block
@@ -118,11 +130,15 @@
   margin-left -10px
   &:hover
     text-decoration underline
+  @media (max-width breakpoint-md)
+    font-size 16px
 
 .menu-block__col-nda
   margin-top 120px
   @media (max-width breakpoint-lg)
     margin-top 50px
+  @media (max-width breakpoint-md)
+    margin-top 10px
 
 .menu-block__logo
   background-color accent-color
@@ -170,6 +186,14 @@
   @media (max-width breakpoint-lg)
     &+&
       margin-top 40px
+  @media (max-width breakpoint-md)
+    &+&
+      margin-top 20px
+    .systems__icon,
+    .systems__text
+      display none
+    .systems__item-title
+      max-width 100%
 
 .menu-block__action
   position absolute
