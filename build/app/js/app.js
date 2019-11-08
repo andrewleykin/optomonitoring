@@ -62,11 +62,7 @@
 			adaptiveHeight: true
 		})
 
-		$('.menu-block__col').eq(1).addClass('active')
-
-		$('.menu-block__col-title').click(function(){
-			var parentIndex = $(this).closest('.menu-block__col').addClass('active').siblings().removeClass('active')
-		})
+		$('.js-menu-contact').text('Контакты')
 	}
 })();
 $(document).ready(function () {

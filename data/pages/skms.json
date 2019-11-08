@@ -86,6 +86,9 @@
       }
     ]
   },
+  "architecture": {
+    
+  },
   "features": {
     "id": "features",
     "title": "Особенности СМПО",

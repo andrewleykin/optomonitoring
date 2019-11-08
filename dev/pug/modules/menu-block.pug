@@ -4,14 +4,15 @@
       .menu-block__logo
         +icon(global.logo.icon)
       .menu-block__col-wrapper
-        h4.menu-block__col-title.menu-block__col-title--not-transform= global.coopName
-        .menu-block__contact-block
-          include ./contact-block
-        .menu-block__contact-form
-          include ./contact-form
-          include ./policy
-        .menu-block__copyright
-          include ./copyright
+        h4.menu-block__col-title.menu-block__col-title--not-transform.js-menu-contact= global.coopName
+        .menu-block__col-content
+          .menu-block__contact-block
+            include ./contact-block
+          .menu-block__contact-form
+            include ./contact-form
+            include ./policy
+          .menu-block__copyright
+            include ./copyright
     .menu-block__col
       h4.menu-block__col-title= index.systems.title
       .menu-block__col-content.menu-block__systems

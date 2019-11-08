@@ -14,11 +14,8 @@
 
 .menu-block__content
   display flex
-  @media (max-width breakpoint-sm)
-    flex-wrap wrap
-    padding-top 100px
   @media (max-width breakpoint-md)
-    display block
+    flex-direction column
     height 100%
     padding-top 100px
 
@@ -64,18 +61,18 @@
     &+&
       border-left none
       margin-top 20px
+    &:first-child
+      margin-top 20px
+      display block
+      order 5
+      .menu-block__logo
+        display none
+      .menu-block__col-wrapper
+        padding 0 20px
     &--nda
       position static
       &:before
         display none
-    &.active
-      .menu-block__col-content
-        display block
-      .menu-block__col-title
-        color accent-color
-        margin-bottom 10px
-        &:after
-          transform translateY(-3px) rotate(-135deg) 
 
 .menu-block__col-wrapper
   padding 0 30px
@@ -84,7 +81,6 @@
 
 .menu-block__col-content
   @media (max-width breakpoint-md)
-    display none
     padding-left 10px
 
 .menu-block__col-title
@@ -103,8 +99,9 @@
     cursor pointer
     display flex
     align-items center
+    margin-bottom 10px
     &:after
-      content ''
+      // content ''
       display block
       width 8px
       height 8px
@@ -132,6 +129,7 @@
     text-decoration underline
   @media (max-width breakpoint-md)
     font-size 16px
+    font-weight normal
 
 .menu-block__col-nda
   margin-top 120px
@@ -194,6 +192,7 @@
       display none
     .systems__item-title
       max-width 100%
+      font-weight normal
 
 .menu-block__action
   position absolute
