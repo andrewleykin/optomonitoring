@@ -54,6 +54,31 @@
 	}
 	scrollNav();
 
+	//smpo slider
+	if (!!$('.smpo-architecture__slider-slider')) {
+		const slider = $('.smpo-architecture__slider-slider')
+		const arrows = $('.smpo-architecture__slider-arrow')
+		slider.slick({
+			arrows: false,
+			dots: false,
+			infinite: false
+		})
+
+		arrows.filter('.prev').addClass('disable')
+
+		arrows.click(function() {
+			if ($(this).hasClass('disable')) return false
+			arrows.addClass('disable')
+			slider.slick($(this).hasClass('prev') ? 'slickPrev' : 'slickNext')
+
+			const currentSlide = slider.slick('slickCurrentSlide')
+			const slideCount = slider.slick('getSlick').slideCount
+			
+			if (currentSlide !== 0) arrows.filter('.prev').removeClass('disable')
+			if (currentSlide + 1 !== slideCount) arrows.filter('.next').removeClass('disable')
+		})
+	}
+
 	// adaptive
 	if ($(window).width() <= 768) {
 		$('.advantage').slick({
