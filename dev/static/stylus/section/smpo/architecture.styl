@@ -2,6 +2,12 @@
   border-bottom 1px solid mercury
   .container
     position relative
+    border-left 1px solid mercury
+    border-right 1px solid mercury
+  .inner-section__title
+    padding 50px 40px 0
+    @media (max-width breakpoint)
+      padding 40px 20px 0
 
 .smpo-architecture__links
   position absolute
@@ -19,17 +25,24 @@
 
 .smpo-architecture__slider
   position relative
-  padding-left 40px
-  @media (max-width breakpoint)
-    padding-left 0
+
+.smpo-architecture__slide
+  position relative
+  height 600px
+  @media (max-width breakpoint-md)
+    height auto
+    padding-bottom 100px
+  @media (max-width breakpoint-sm)
+    padding-bottom 60px
 
 .smpo-architecture__slider-arrows
   position absolute
-  right 0
-  bottom 100px
+  right 45px
+  bottom 250px
   display flex
   @media (max-width breakpoint-md)
-    bottom 0
+    bottom 10px
+
 
 .smpo-architecture__slider-arrow
   width 130px
@@ -73,26 +86,22 @@
       width 30px
       height 30px
 
-.smpo-architecture__slide-wrap
-  position relative
-  display flex
-  justify-content space-between
-  @media (max-width breakpoint-sm)
-    flex-direction column-reverse
-
 .smpo-architecture__slide-img
-  width 100%
-  max-width 400px
-  @media (max-width breakpoint-sm)
-    max-width 100%
+  position absolute
+  top 0
+  z-index -1
+  @media (max-width breakpoint-md)
+    position static
 
 .smpo-architecture__slide-info
   width 100%
   max-width 400px
   font-size 16px
+  margin-left auto
   @media (max-width breakpoint-sm)
     max-width 100%
     margin-bottom 20px
+    padding 0 20px
 
 .smpo-architecture__slide-num
   font-size 34px
