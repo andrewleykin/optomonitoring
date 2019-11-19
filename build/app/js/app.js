@@ -4,16 +4,15 @@
 	// header
 	const headerEl = $('.header');
 	const	headerClass = 'header--background';
-	const { pathname } = location;
-	if (!!$('.js-index')) {
-		headerEl.addClass(headerClass)
-		$('.main').addClass('main--inner')
-	} else {
+	if ($('.js-index').length !== 0) {
 		$(window).on('scroll', () => {
 			$(window).scrollTop() >= 65 
 				? headerEl.addClass(headerClass) 
 				: headerEl.removeClass(headerClass)
 		})
+	} else {
+		headerEl.addClass(headerClass)
+		$('.main').addClass('main--inner')
 	}
 
 	// form label
