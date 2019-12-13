@@ -4,13 +4,19 @@
   &:before
     content ''
     display block
-    width 1px
+    width 2px
     height 100%
     background-color alto
     position absolute
     top 0
     left 50%
     transform translateX(-50%)
+  &.footer-press .footer__logo
+    border-top: 0px 
+    border-bottom 0px
+  &.footer-press
+    &:before
+      border-left 1px solid #e8e8e8
   @media (max-width breakpoint-lg)
     padding-top 30px
   @media (max-width breakpoint)
