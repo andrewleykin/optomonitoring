@@ -89,3 +89,11 @@
 		$('.js-menu-contact').text('Контакты')
 	}
 })();
+
+// function setPadding() {
+//     $('.contact-container').css({
+//         "padding-bottom":$(window).height() - $(".header").height() - $(".inner-hero").height() - $(".gap").height() - $(".contact__content").height() + 'px'
+//     });
+// }
+// setPadding(); // устанавливаем высоту окна при первой загрузке страницы
+// $(window).resize( setPadding ); // обновляем при изменении размеров окна
